@@ -14,10 +14,15 @@ const EmailList = ({
   onSelectDomain,
   children,
   isGroup,
+  openByDefault,
 }: EmailListTypes): JSX.Element => {
   if (isGroup)
     return (
-      <Collapse header={domain} onClickHeader={onSelectDomain}>
+      <Collapse
+        header={domain}
+        onClickHeader={onSelectDomain}
+        openByDefault={openByDefault}
+      >
         {children}
       </Collapse>
     );

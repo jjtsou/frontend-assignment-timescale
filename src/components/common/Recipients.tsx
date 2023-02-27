@@ -44,17 +44,18 @@ const Recipients = ({
       </Heading>
       {Object.keys(recipients).map((domain) => (
         <EmailList
-          key={`${domain}_list_selected`}
+          key={`${domain}_list`}
           domain={domain}
           onSelectDomain={
             isSelectable ? () => handleSelectDomain?.({ domain }) : undefined
           }
           isGroup={isGroup || recipients[domain].length > 1}
+          openByDefault={!!recipients[domain].length}
         >
           {recipients[domain].map(({ email, isSelected }, i) => {
             return (
               <EmailListItem
-                key={`${email}_${i}`}
+                key={`${email}_${i}_list_item`}
                 isSelected={isSelected}
                 value={email}
                 onClick={

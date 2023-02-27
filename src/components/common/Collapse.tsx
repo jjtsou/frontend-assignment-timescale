@@ -15,6 +15,23 @@ type CollapseTypes = {
   children: ReactNode;
 };
 
+//
+// 🔴 Avoid: Adjusting state on prop change in an Effect
+// useEffect(() => {
+//   setSelection(null);
+// }, [items]);
+//
+// https://beta.reactjs.org/learn/you-might-not-need-an-effect
+//
+// Better: Adjust the state while rendering
+// const [prevItems, setPrevItems] = useState(items);
+// if (items !== prevItems) {
+//   setPrevItems(items);
+//   setSelection(null);
+// }
+//
+// I could use this approach to open / close the collapse when it has no items to show
+
 const Collapse = ({
   header,
   openByDefault = false,

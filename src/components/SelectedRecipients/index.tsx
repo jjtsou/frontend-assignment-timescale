@@ -1,6 +1,6 @@
 import { Heading, Flex } from '@chakra-ui/react';
 import { useRecipientsContext } from '../../context';
-import { EmailList } from '../common';
+import { EmailList, EmailListItem } from '../common';
 
 const SelectedRecipients = (): JSX.Element => {
   const { getGroupedRecipients } = useRecipientsContext();
@@ -21,11 +21,17 @@ const SelectedRecipients = (): JSX.Element => {
         Selected Recipients
       </Heading>
       {Object.keys(groupedRecipients).map((groupBy) => (
-        <EmailList
-          key={`${groupBy}_list_selected`}
-          emails={groupedRecipients[groupBy]}
-          domain={groupBy}
-        />
+        <EmailList key={`${groupBy}_list_selected`} domain={groupBy}>
+          {groupedRecipients[groupBy].map(({ email, isSelected }, i) => {
+            return (
+              <EmailListItem
+                key={`${email}_${i}`}
+                isSelected={isSelected}
+                value={email}
+              />
+            );
+          })}
+        </EmailList>
       ))}
     </Flex>
   );

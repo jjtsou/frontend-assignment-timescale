@@ -1,27 +1,20 @@
-import EmailListItem from './EmailListItem';
-import { SelectRecipientParams, Recipients } from '../../types/Recipient';
+import { ReactNode } from 'react';
 import Collapse from './Collapse';
 
 type EmailListTypes = {
-  emails: Recipients;
   domain: string;
   openByDefault?: boolean;
-  selectRecipient?: ({
-    domain,
-    email,
-    isSelected,
-  }: SelectRecipientParams) => void;
   onSelectDomain?: () => void;
+  children: ReactNode;
 };
 
 const EmailList = ({
-  emails,
   domain,
-  selectRecipient,
   onSelectDomain,
+  children,
 }: EmailListTypes): JSX.Element => (
   <Collapse header={domain} onClickHeader={onSelectDomain}>
-    {emails.map(({ email, isSelected }, i) => {
+    {/* {emails.map(({ email, isSelected }, i) => {
       return (
         <EmailListItem
           key={`${email}_${i}`}
@@ -34,7 +27,8 @@ const EmailList = ({
           value={email}
         />
       );
-    })}
+    })} */}
+    {children}
   </Collapse>
 );
 

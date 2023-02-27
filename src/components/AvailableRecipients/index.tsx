@@ -30,12 +30,23 @@ const AvailableRecipients = (): JSX.Element => {
           return emails.length > 1 ? (
             <EmailList
               key={`${domain}_list_available`}
-              emails={emails}
               domain={domain}
               openByDefault
-              selectRecipient={selectRecipient}
               onSelectDomain={() => selectDomain({ domain })}
-            />
+            >
+              {emails.map(({ email, isSelected }, i) => {
+                return (
+                  <EmailListItem
+                    key={`${email}_${i}`}
+                    onClick={() =>
+                      selectRecipient({ domain, email, isSelected })
+                    }
+                    value={email}
+                    isSelected={isSelected}
+                  />
+                );
+              })}
+            </EmailList>
           ) : (
             <EmailListItem
               key={`${emails[0].email}_list_available`}

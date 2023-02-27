@@ -13,10 +13,6 @@ export type SelectDomainParams = {
   domain: string;
 };
 
-export type GroupedRecipientTypes = {
-  [key: string]: Recipients;
-};
-
 export type SelectRecipientType = ({
   email,
   domain,
@@ -30,7 +26,7 @@ export type SelectRecipientType = ({
 export type useRecipientsContextType = {
   recipients: RecipientsByDomain;
   selectedDomains: string[];
-  getGroupedRecipients: () => GroupedRecipientTypes;
+  getGroupedRecipients: () => RecipientsByDomain;
   selectRecipient: ({
     domain,
     email,

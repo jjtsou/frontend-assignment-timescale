@@ -52,11 +52,10 @@ const Collapse = ({
           minW={6}
         />
         <Text
-          as={Button}
+          as={onClickHeader ? Button : Text}
           fontWeight="semibold"
           color="gray.500"
           onClick={onClickHeader}
-          cursor={onClickHeader ? 'pointer' : 'initial'}
         >
           {header}
         </Text>

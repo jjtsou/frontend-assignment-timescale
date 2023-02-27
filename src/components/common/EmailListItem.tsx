@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 import { memo } from 'react';
 
 type EmailListItemTypes = {
@@ -14,14 +14,12 @@ const EmailListItem = ({
 }: EmailListItemTypes): JSX.Element => {
   return (
     <Text
-      cursor={onClick ? 'pointer' : 'initial'}
+      as={onClick ? Button : Text}
       color={isSelected ? 'blackAlpha' : 'gray.500'}
       fontWeight={'semibold'}
       onClick={onClick}
-      _hover={onClick ? { bg: 'gray.200' } : {}}
       py={1}
       px={2}
-      rounded={4}
     >
       {value}
     </Text>

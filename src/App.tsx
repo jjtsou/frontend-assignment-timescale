@@ -1,32 +1,13 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { useRecipients } from './hooks';
 import { RecipientsContext } from './context';
 import Layout from './components/Layout';
 
-const App = () => {
-  const {
-    recipients,
-    selectedDomains,
-    getGroupedRecipients,
-    selectRecipient,
-    selectDomain,
-  } = useRecipients();
-
-  return (
-    <ChakraProvider>
-      <RecipientsContext.Provider
-        value={{
-          recipients,
-          selectedDomains,
-          getGroupedRecipients,
-          selectRecipient,
-          selectDomain,
-        }}
-      >
-        <Layout />
-      </RecipientsContext.Provider>
-    </ChakraProvider>
-  );
-};
+const App = () => (
+  <ChakraProvider>
+    <RecipientsContext>
+      <Layout />
+    </RecipientsContext>
+  </ChakraProvider>
+);
 
 export default App;

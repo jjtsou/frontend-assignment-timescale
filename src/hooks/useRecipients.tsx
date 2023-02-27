@@ -12,6 +12,7 @@ import {
 const getInitialState = (): RecipientsByDomain => normalizeData(recipients);
 
 const useRecipients = () => {
+  //useReducer
   const [recipients, setRecipients] =
     useState<RecipientsByDomain>(getInitialState);
   const [selectedDomains, setSelectedDomains] = useState<string[]>([]);

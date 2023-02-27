@@ -17,11 +17,11 @@ const EmailListItem = ({
     <Text
       cursor={shouldHavePointerEvents ? 'pointer' : 'initial'}
       color={isSelected ? 'blackAlpha' : 'gray.500'}
+      fontWeight={'semibold'}
       onClick={onClick}
       _hover={shouldHavePointerEvents ? { bg: 'gray.200' } : {}}
-      p={1}
-      pr={2}
-      pl={2}
+      py={1}
+      px={2}
       rounded={4}
     >
       {value}

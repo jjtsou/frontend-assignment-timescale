@@ -34,7 +34,7 @@ const AvailableRecipients = (): JSX.Element => {
               domain={domain}
               openByDefault
               selectRecipient={selectRecipient}
-              selectDomain={selectDomain}
+              onSelectDomain={() => selectDomain({ domain })}
             />
           ) : (
             <EmailListItem

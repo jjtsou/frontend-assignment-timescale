@@ -4,7 +4,6 @@ import { RecipientsContext } from './context';
 import Layout from './components/Layout';
 
 const App = () => {
-  // remove state
   const {
     recipients,
     selectedDomains,

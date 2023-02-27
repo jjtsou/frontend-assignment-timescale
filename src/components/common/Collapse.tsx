@@ -15,25 +15,6 @@ type CollapseTypes = {
   children: ReactNode;
 };
 
-// useEffect(() => {
-//   if (!emails.length) setIsOpen(false);
-//   else setIsOpen(true);
-// }, [emails.length]);
-
-// 🔴 Avoid: Adjusting state on prop change in an Effect
-// useEffect(() => {
-//   setSelection(null);
-// }, [items]);
-//
-// https://beta.reactjs.org/learn/you-might-not-need-an-effect
-//
-// Better: Adjust the state while rendering
-// const [prevItems, setPrevItems] = useState(items);
-// if (items !== prevItems) {
-//   setPrevItems(items);
-//   setSelection(null);
-// }
-
 const Collapse = ({
   header,
   openByDefault = false,

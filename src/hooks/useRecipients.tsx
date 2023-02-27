@@ -2,7 +2,6 @@ import { useCallback, useMemo, useState } from 'react';
 import { getDomain, normalizeData } from '../utils';
 import recipients from '../assets/recipientsData.json';
 import {
-  GroupedRecipientTypes,
   Recipients,
   RecipientsByDomain,
   SelectDomainParams,
@@ -12,7 +11,6 @@ import {
 const getInitialState = (): RecipientsByDomain => normalizeData(recipients);
 
 const useRecipients = () => {
-  //useReducer
   const [recipients, setRecipients] =
     useState<RecipientsByDomain>(getInitialState);
   const [selectedDomains, setSelectedDomains] = useState<string[]>([]);
@@ -51,7 +49,7 @@ const useRecipients = () => {
     } else setSelectedDomains([...selectedDomains, domain]);
   };
 
-  const getGroupedRecipients: () => GroupedRecipientTypes = useCallback(() => {
+  const getGroupedRecipients: () => RecipientsByDomain = useCallback(() => {
     const groupedRecipientsObj: {
       company: Recipients;
       email: Recipients;

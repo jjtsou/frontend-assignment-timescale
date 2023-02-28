@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Collapse from './Collapse';
+import Collapse from '../Collapse';
 
 type EmailListTypes = {
   domain: string;

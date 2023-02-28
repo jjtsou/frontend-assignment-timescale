@@ -1,4 +1,4 @@
-import { RecipientsByDomain } from '../types/Recipient';
+import { RecipientsByDomain } from '../../types/Recipient';
 
 type Items = { label: string; value: string }[];
 

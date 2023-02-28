@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-qbhc64"
+  >
+    <h2
+      class="chakra-heading css-58v1or"
+    >
+      Recipients
+    </h2>
+    <div
+      class="css-j7qwjs"
+    >
+      <div
+        class="css-1m29ivc"
+      >
+        <button
+          aria-label="Open collapsible panel"
+          class="chakra-button css-9imh88"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-icon css-onkibi"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <p
+          class="chakra-text chakra-text css-1efywoh"
+        >
+          gmail.com
+        </p>
+      </div>
+      <div
+        class="chakra-collapse"
+        style="overflow: hidden; display: block; opacity: 1; height: auto;"
+      >
+        <div
+          class="css-11qo4fr"
+        >
+          <p
+            class="chakra-text chakra-text css-1k47jjv"
+          >
+            john@gmail.com
+          </p>
+          <p
+            class="chakra-text chakra-text css-1pldbq1"
+          >
+            alex@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <p
+      class="chakra-text chakra-text css-1k47jjv"
+    >
+      mary@timescale.com
+    </p>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailList component should render properly 1`] = `
+<div>
+  <span>
+    List item
+  </span>
+</div>
+`;
+
+exports[`EmailList component should render with group 1`] = `
+<div>
+  <div
+    class="css-j7qwjs"
+  >
+    <div
+      class="css-1m29ivc"
+    >
+      <button
+        aria-label="Open collapsible panel"
+        class="chakra-button css-9imh88"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="chakra-icon css-onkibi"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+      <p
+        class="chakra-text chakra-text css-1efywoh"
+      >
+        timescale.com
+      </p>
+    </div>
+    <div
+      class="chakra-collapse"
+      style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+    >
+      <div
+        class="css-11qo4fr"
+      >
+        <span>
+          List item
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EmailList component should render with openByDefault 1`] = `
+<div>
+  <div
+    class="css-j7qwjs"
+  >
+    <div
+      class="css-1m29ivc"
+    >
+      <button
+        aria-label="Open collapsible panel"
+        class="chakra-button css-9imh88"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="chakra-icon css-onkibi"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+      <p
+        class="chakra-text chakra-text css-1efywoh"
+      >
+        timescale.com
+      </p>
+    </div>
+    <div
+      class="chakra-collapse"
+      style="overflow: hidden; display: block; opacity: 1; height: auto;"
+    >
+      <div
+        class="css-11qo4fr"
+      >
+        <span>
+          List item
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -6,8 +6,8 @@ import useDeepCompareEffect from 'react-use/lib/useDeepCompareEffect';
 import { Stack, Box, List, ListItem } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/input';
 import { Text } from '@chakra-ui/react';
-import { getDomain, isValidEmail } from '../../utils';
-import { SelectRecipientParams } from '../../types/Recipient';
+import { getDomain, isValidEmail } from '../../../utils';
+import { SelectRecipientParams } from '../../../types/Recipient';
 
 type Item = {
   label: string;

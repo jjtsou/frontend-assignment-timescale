@@ -1,6 +1,6 @@
 import { Heading, Flex } from '@chakra-ui/react';
-import { RecipientsByDomain } from '../../types/Recipient';
-import { EmailList, EmailListItem } from '.';
+import { RecipientsByDomain } from '../../../types/Recipient';
+import { EmailList, EmailListItem } from '..';
 
 type RecipientsProps = {
   header: string;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailListItem should render as a button when onClick prop is provided 1`] = `
+<button
+  class="chakra-button chakra-text css-127jow9"
+  type="button"
+>
+  test@example.com
+</button>
+`;
+
+exports[`EmailListItem should render as selected when isSelected prop is true 1`] = `
+<p
+  class="chakra-text chakra-text css-1pldbq1"
+>
+  test@example.com
+</p>
+`;
+
+exports[`EmailListItem should render correctly 1`] = `
+<p
+  class="chakra-text chakra-text css-1k47jjv"
+>
+  test@example.com
+</p>
+`;

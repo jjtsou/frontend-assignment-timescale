@@ -1,5 +1,9 @@
-import { Recipient, Recipients, RecipientsByDomain } from '../types/Recipient';
-import getDomain from './getDomain';
+import {
+  Recipient,
+  Recipients,
+  RecipientsByDomain,
+} from '../../types/Recipient';
+import getDomain from '../getDomain';
 
 const normalizeData = (recipients: Recipients): RecipientsByDomain =>
   recipients.reduce((acc: RecipientsByDomain, recipient: Recipient) => {

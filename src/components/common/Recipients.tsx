@@ -32,14 +32,22 @@ const Recipients = ({
       direction="column"
       justifyContent="start"
       alignItems="start"
-      minH="45vh"
+      minH="55vh"
+      minW="25vw"
       p={20}
       pt={10}
       border="2px solid"
       borderColor="gray.400"
       rounded={5}
+      textAlign="center"
     >
-      <Heading size="md" noOfLines={1} mb={5} color="gray.500">
+      <Heading
+        size="md"
+        noOfLines={1}
+        mb={5}
+        color="gray.500"
+        alignSelf="center"
+      >
         {header}
       </Heading>
       {Object.keys(recipients).map((domain) => (

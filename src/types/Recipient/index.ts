@@ -27,6 +27,7 @@ export type useRecipientsContextType = {
   recipients: RecipientsByDomain;
   selectedDomains: string[];
   getGroupedRecipients: () => RecipientsByDomain;
+  addNewRecipient: (email: string) => void;
   selectRecipient: ({
     domain,
     email,

@@ -49,6 +49,15 @@ const useRecipients = () => {
     } else setSelectedDomains([...selectedDomains, domain]);
   };
 
+  const addNewRecipient = (email: string) => {
+    const clonedRecipients = structuredClone(recipients);
+    const domain = getDomain(email);
+    if (!clonedRecipients[domain]) clonedRecipients[domain] = [];
+    clonedRecipients[domain].push({ email, isSelected: false });
+
+    setRecipients(clonedRecipients);
+  };
+
   const getGroupedRecipients: () => RecipientsByDomain = useCallback(() => {
     const groupedRecipientsObj: {
       company: Recipients;
@@ -64,14 +73,6 @@ const useRecipients = () => {
 
     return groupedRecipientsObj;
   }, [recipients]);
-
-  const addNewRecipient = (email: string) => {
-    const clonedRecipients = structuredClone(recipients);
-    const domain = getDomain(email);
-    if (!clonedRecipients[domain]) clonedRecipients[domain] = [];
-
-    clonedRecipients[domain].push({ email, isSelected: true });
-  };
 
   return useMemo(
     () => ({

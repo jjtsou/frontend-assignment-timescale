@@ -3,6 +3,7 @@ import { Recipients } from '../common';
 
 const AvailableRecipients = (): JSX.Element => {
   const { recipients, selectRecipient, selectDomain } = useRecipientsContext();
+
   return (
     <Recipients
       header="Available Recipients"

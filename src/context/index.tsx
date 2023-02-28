@@ -12,6 +12,7 @@ export const RecipientsContext = ({ children }: { children: ReactNode }) => {
     recipients,
     selectedDomains,
     getGroupedRecipients,
+    addNewRecipient,
     selectRecipient,
     selectDomain,
   } = useRecipients();
@@ -21,6 +22,7 @@ export const RecipientsContext = ({ children }: { children: ReactNode }) => {
       recipients,
       selectedDomains,
       getGroupedRecipients,
+      addNewRecipient,
       selectRecipient,
       selectDomain,
     }),
@@ -28,6 +30,7 @@ export const RecipientsContext = ({ children }: { children: ReactNode }) => {
       recipients,
       selectedDomains,
       getGroupedRecipients,
+      addNewRecipient,
       selectRecipient,
       selectDomain,
     ]

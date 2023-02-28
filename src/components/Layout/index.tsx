@@ -2,6 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import AvailableRecipients from '../AvailableRecipients';
 import SelectedRecipients from '../SelectedRecipients';
 import logo from '../../assets/logo.svg';
+import RecipientsInput from '../RecipientsInput';
 
 const Layout = () => (
   <Flex
@@ -15,7 +16,8 @@ const Layout = () => (
     bgColor="gray.100"
   >
     <img src={logo} alt="Timescale" />
-    <Flex gap={20} alignItems="start">
+    <RecipientsInput />
+    <Flex gap={80} alignItems="start">
       <AvailableRecipients />
       <SelectedRecipients />
     </Flex>
